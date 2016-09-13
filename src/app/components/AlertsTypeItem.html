@@ -1,0 +1,12 @@
+<li ng-class="{ 'editing': $ctrl.editing }"">
+  <alerts-type-text-input ng-if="$ctrl.editing"
+    new-alerts-type="false"
+    text="$ctrl.alertsType.text"
+    editing="$ctrl.editing"
+    on-save="$ctrl.handleSave(text)">
+  </alerts-type-text-input>
+  <div class="view" ng-if="!$ctrl.editing">
+    <label ng-dblclick="$ctrl.handleDoubleClick()">{{$ctrl.alertsType.text}}</label>
+    <button class="destroy" ng-click="$ctrl.handleDestroy($ctrl.alertsType.id)"></button>
+  </div>
+</li>

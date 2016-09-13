@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <alerts-type-text-input
+      new-alerts-type="true"
+      on-save="$ctrl.handleSave(text)"
+      placeholder="Add new alerts type">
+    </alerts-type-text-input>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="alerts-type-list">
+        <alerts-type-item ng-repeat="alertsType in $ctrl.lstAlertsType"
+          alerts-type="alertsType"
+          on-destroy="$ctrl.handleDestroy(id)"
+          on-save="$ctrl.handleUpdate(type)">
+        </alerts-type-item>
+      </ul>
+    </div>
+  </div>
+</div>

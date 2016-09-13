@@ -1,0 +1,9 @@
+<input
+  class="textInput"
+  ng-class="{'edit': $ctrl.editing, 'new-alerts-type': $ctrl.newAlertsType}"
+  ng-model="$ctrl.text"
+  ng-keypress="$ctrl.handleSubmit($event)"
+  ng-blur="$ctrl.handleBlur()"
+  placeholder="{{$ctrl.placeholder}}"
+  type="text"
+/>
